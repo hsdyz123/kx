@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>八项实验数据</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      tr,
+      th,
+      td {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>八项实验数据</h1>
+      </div>
+
+      <a href="./index.html" type="button" class="btn btn-primary">返回</a>
+      <button id="btn" type="button" class="btn btn-primary">刷新</button>
+
+      <hr />
+
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script>
+      const tbody = document.getElementsByTagName("tbody")[0];
+      const btn = document.getElementById("btn");
+
+      function num() {
+        // const num1 = Number((1.6 + Math.random() * 0.4).toFixed(3))
+        // const num2 = Number((1.5 + Math.random() * 0.4).toFixed(3))
+        // const num3 = Number((1.0 + Math.random() * 0.3).toFixed(3))
+        // const num4 = Number((0.8 + Math.random() * 0.4).toFixed(3))
+        // const num5 = Number((1.2 + Math.random() * 0.4).toFixed(3))
+        // const num6 = Number((1.8 + Math.random() * 0.4).toFixed(3))
+        // const num7 = Number((1.8 + Math.random() * 0.4).toFixed(3))
+        // const num8 = Number((1.2 + Math.random() * 0.6).toFixed(3))
+        const table = document.getElementById("table");
+        // 1
+        tbody.insertAdjacentHTML(
+          "beforeend",
+          `
+          <tr>
+            <td>${1}</td>
+            <td>${(1.6 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.6 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.6 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.6 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.6 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.6 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.6 + Math.random() * 0.4).toFixed(3)}</td>
+          </tr>
+          `
+        );
+        // 2
+        tbody.insertAdjacentHTML(
+          "beforeend",
+          `
+          <tr>
+            <td>${2}</td>
+            <td>${(1.5 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.5 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.5 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.5 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.5 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.5 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.5 + Math.random() * 0.4).toFixed(3)}</td>
+          </tr>
+          `
+        );
+        // 3
+        tbody.insertAdjacentHTML(
+          "beforeend",
+          `
+          <tr>
+            <td>${3}</td>
+            <td>${(1.0 + Math.random() * 0.3).toFixed(3)}</td>
+            <td>${(1.0 + Math.random() * 0.3).toFixed(3)}</td>
+            <td>${(1.0 + Math.random() * 0.3).toFixed(3)}</td>
+            <td>${(1.0 + Math.random() * 0.3).toFixed(3)}</td>
+            <td>${(1.0 + Math.random() * 0.3).toFixed(3)}</td>
+            <td>${(1.0 + Math.random() * 0.3).toFixed(3)}</td>
+            <td>${(1.0 + Math.random() * 0.3).toFixed(3)}</td>
+          </tr>
+          `
+        );
+        // 4
+        tbody.insertAdjacentHTML(
+          "beforeend",
+          `
+          <tr>
+            <td>${4}</td>
+            <td>${(0.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(0.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(0.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(0.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(0.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(0.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(0.8 + Math.random() * 0.4).toFixed(3)}</td>
+          </tr>
+          `
+        );
+        // 5
+        tbody.insertAdjacentHTML(
+          "beforeend",
+          `
+          <tr>
+            <td>${5}</td>
+            <td>${(1.2 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.4).toFixed(3)}</td>
+          </tr>
+          `
+        );
+        // 6
+        tbody.insertAdjacentHTML(
+          "beforeend",
+          `
+          <tr>
+            <td>${6}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+          </tr>
+          `
+        );
+        // 7
+        tbody.insertAdjacentHTML(
+          "beforeend",
+          `
+          <tr>
+            <td>${7}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+            <td>${(1.8 + Math.random() * 0.4).toFixed(3)}</td>
+          </tr>
+          `
+        );
+        // 8
+        tbody.insertAdjacentHTML(
+          "beforeend",
+          `
+          <tr>
+            <td>${8}</td>
+            <td>${(1.2 + Math.random() * 0.6).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.6).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.6).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.6).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.6).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.6).toFixed(3)}</td>
+            <td>${(1.2 + Math.random() * 0.6).toFixed(3)}</td>
+          </tr>
+          `
+        );
+      }
+
+      num();
+      btn.addEventListener("click", () => {
+        tbody.textContent = "";
+        num();
+      });
+    </script>
+  </body>
+</html>

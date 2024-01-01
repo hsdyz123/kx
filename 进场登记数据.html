@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>进场登记数据</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      tr,
+      th,
+      td {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>进场登记数据</h1>
+      </div>
+
+      <a href="./index.html" type="button" class="btn btn-primary">返回</a>
+      <button id="btn" type="button" class="btn btn-primary">刷新</button>
+      <hr />
+      <b>注：单头毛重为114kg-120kg范围内。</b>
+      <hr />
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>头数</th>
+            <th>单头毛重(kg)</th>
+            <th>总毛重(kg)</th>
+            <th>序号</th>
+            <th>头数</th>
+            <th>单头毛重(kg)</th>
+            <th>总毛重(kg)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script>
+      const tbody = document.getElementsByTagName("tbody")[0];
+      const btn = document.getElementById("btn");
+
+      // 出数的函数
+      function num() {
+        let n = 100;
+        for (let i = 0; i < n; i++) {
+          let a = Number((114 + Math.random() * 6).toFixed(0));
+          let b = a * (i + 1);
+          let c = Number((114 + Math.random() * 6).toFixed(0));
+          let d = c * (i + n + 1);
+          // console.log(a, b, c, d);
+
+          tbody.insertAdjacentHTML(
+            "beforeend",
+            `
+            <tr>
+              <td>${i + 1}</td>
+              <td>${i + 1}</td>
+              <td>${a}</td>
+              <td>${b}</td>            
+              <td>${i + n + 1}</td>
+              <td>${i + n + 1}</td>
+              <td>${c}</td>          
+              <td>${d}</td>            </tr>
+          `
+          );
+        }
+      }
+
+      num();
+      btn.addEventListener("click", () => {
+        tbody.textContent = "";
+        num();
+      });
+    </script>
+  </body>
+</html>

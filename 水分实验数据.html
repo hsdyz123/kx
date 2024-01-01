@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>水分实验数据</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      tr,
+      th,
+      td {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>水分实验数据</h1>
+      </div>
+
+      <a href="./index.html" type="button" class="btn btn-primary">返回</a>
+      <button id="btn" type="button" class="btn btn-primary">刷新</button>
+
+      <hr />
+      <b>注：6=2*7; 5=2-6</b>
+      <hr />
+
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>1产品名称</th>
+            <th>2样重</th>
+            <th>3干燥温度</th>
+            <th>4加热时间</th>
+            <th>5干燥重量</th>
+            <th>6失重</th>
+            <th>7水分</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script>
+      const tbody = document.getElementsByTagName("tbody")[0];
+      const btn = document.getElementById("btn");
+
+      function num() {
+        for (let i = 0; i < 30; i++) {
+          const table = document.getElementById("table");
+
+          const num1 = "";
+          const num2 = Number((4 + Math.random() * 2.5).toFixed(3));
+          const num3 = "105℃";
+          const num7 = Number((63 + Math.random() * 12).toFixed(2) / 100);
+          const num6 = Number((num2 * num7).toFixed(3));
+          const num5 = Number((num2 - num6).toFixed(3));
+          const num4 = "";
+
+          tbody.insertAdjacentHTML(
+            "beforeend",
+            `
+          <tr>
+            <td>${i + 1}</td>
+            <td>${num1}</td>
+            <td>${num2.toFixed(3)}</td>
+            <td>${num3}</td>
+            <td>${num4}</td>
+            <td>${num5.toFixed(3)}</td>
+              <td>${num6.toFixed(3)}</td>
+              <td>${(num7 * 100).toFixed(2) + "%"}</td>
+              </tr>
+              `
+          );
+        }
+      }
+
+      num();
+      btn.addEventListener("click", () => {
+        tbody.textContent = "";
+        num();
+      });
+    </script>
+  </body>
+</html>

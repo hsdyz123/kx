@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>日照市康信食品有限公司</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      tr,
+      th,
+      td {
+        text-align: center;
+      }
+      li {
+        line-height: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>康信食品 <small>品控部</small></h1>
+      </div>
+
+      <ul>
+        <li><a href="./进场登记数据.html">进场登记数据</a></li>
+        <li><a href="./水分实验数据.html">水分实验数据</a></li>
+        <li><a href="./八项实验数据.html">八项实验数据</a></li>
+        <li><a href="./台账时间数据.html">台账时间数据</a></li>
+      </ul>
+
+      <hr />
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>网址</th>
+            <th>账号</th>
+            <th>密码</th>
+            <th>备注</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="zhanghao">
+        <h3>山东省智慧畜牧业务支撑服务系统 账号密码</h3>
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th>名字</th>
+              <th>账号</th>
+              <th>密码</th>
+              <th>备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>杨莉颖</td>
+              <td>17763335750</td>
+              <td>RZkx654321.</td>
+            </tr>
+            <tr>
+              <td>李会</td>
+              <td>15266630083</td>
+              <td>RZkx654321++</td>
+            </tr>
+            <tr>
+              <td>丁立路</td>
+              <td>13963053139</td>
+              <td>RZkx654321</td>
+            </tr>
+            <tr>
+              <td>张玉杰</td>
+              <td>18769999051</td>
+              <td>SHUNfa818$</td>
+              <td>无疫区调运人</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="taizhang">
+        <h3>八本台账 签名</h3>
+        <ul>
+          <li>车辆消毒——庄国法</li>
+          <li>瘦肉精检测—李会</li>
+          <li>耳标回收——张玉杰</li>
+          <li>检疫申报——汪云涛</li>
+          <li>宰前检验——王帅</li>
+          <li>宰后检验——丁立路</li>
+          <li>无害化处理—丁杰年</li>
+          <li>设备维修——刘恩伟</li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      const content = [
+        {
+          name: "山东省智慧畜牧业务支撑服务系统",
+          src: "https://dwws.shandongxm.cn:18060/index.html#/login",
+          zh: "15266630083",
+          mm: "RZkx654321++",
+          bz: "八本台账用",
+        },
+        {
+          name: "青岛屠宰系统",
+          src: "http://tz.qdmvct.cn/",
+          zh: "13506331686",
+          mm: "331686",
+          bz: "每天填报",
+        },
+        {
+          name: "牧运通",
+          src: "https://clgl.cadc.net.cn:18087/index.html#/login",
+          zh: "371101164233",
+          mm: "RXSPkxsp0824.",
+          bz: "周末填报",
+        },
+        {
+          name: "全国畜禽屠宰行业管理系统(已弃用)",
+          src: "https://xqtz.cadc.net.cn/login.do",
+          zh: "371101164233",
+          mm: "123",
+          bz: "周一填报",
+        },
+        {
+          name: "山东省肉品品质检验合格证电子出证系统",
+          src: "https://meatcer.shandongxm.cn/#/login",
+          zh: "rzjkqtzkx",
+          mm: "Rzkx1234@",
+          bz: "周一填报，内容和牧运通一样就行",
+        },
+
+        {
+          name: "食品伙伴网下载中心",
+          src: "http://down.foodmate.net/",
+          zh: "",
+          mm: "",
+          bz: "查询国家标准用",
+        },
+        {
+          name: "公众查询服务系统",
+          src: "http://117.73.254.161:8060/pubinfo/",
+          zh: "",
+          mm: "",
+          bz: "查询检疫证和车辆用",
+        },
+      ];
+
+      const tbody = document.getElementsByTagName("tbody")[0];
+      for (let i = 0; i < content.length; i++) {
+        tbody.insertAdjacentHTML(
+          "beforeend",
+          `
+            <tr>
+              <td>${i + 1}</td>
+              <td><a href="${content[i].src}">${content[i].name}</a></td>
+              <td>${content[i].zh}</td>
+              <td>${content[i].mm}</td>
+              <td>${content[i].bz}</td>
+            </tr>
+          `
+        );
+      }
+    </script>
+  </body>
+</html>
